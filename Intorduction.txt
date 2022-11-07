@@ -1,0 +1,90 @@
+Redux is a predictable state container for javascript app:
+->It is for javascript:-
+
+    Redux is not tied to React
+    Can be used with React, Angular, Vve or even vanilla javascript
+    So we can say that Redux is a library for javascript application.
+
+->It is state container:-
+
+    Redux store the state of our application
+    consider a React app -state of a component
+    state of an app is the state represented by all the individual component of that app
+    Redux will store and manage the application state
+
+->It is predictable
+
+    Since Redux is state container and state of an application can change
+    In Redux, all state transition are explicit and it is possible to keep track of them
+    The changes of your application's state become predictable
+
+============================================================
+If we wnat to manage state of app in a predictable way then Redux will be used
+
+React:-> UI library
+Redux:-> state mangement library
+so when we want to use Redux in React then we need React-Redux
+
+
+Summary:-
+React is a library to bluild UI
+Redux is library for managing the state in a predictable way in javascript
+React-Redux is a library that provides bindings to use React and Redux togather in an application
+
+
+
+===================================================================
+Lecture-3
+
+The three core concepts contd
+
+1.  A store that holds the state of your application
+2.  An action which carries out the state of the application
+3.  A reduce which actually carries out the state transition on the action
+
+
+=========================================================================
+Lecture-4:
+
+three principles:
+
+1.  "The state of your whole applications is stored in an object tree within a single store"
+    maintain our application state in a single object which would be manage by Redux store
+
+2.  "The only way to change the state is to emit an action, an object describing what happend"
+    to update the state of your app, you need to let Redux know about that an action.
+    Not allowed to direct update the state object
+
+3.  "To specify how the state is transformed by actions, you write pure reduces"
+    Reducer - (preveousState, action) =>newState
+
+======================================================================================
+Lecture-5
+
+Actions:- 
+   
+Actions are the only way, your application can interact with the store
+It carry some information from your app to the Redux store
+it is a plain javascript object
+
+Have a 'type' property that indicates the type of action being performed
+The 'type' property is typically defined as string constants
+
+
+Reducer:-
+
+tspecify how  the app's state changes in response to action sent to the store
+Funtion that accepts state and action as arguements, and return the next state of the application
+
+(preveousState,action) => newState
+
+Redux Store:-
+
+one store for the entire application
+
+Resposibilties-
+    Holds application state
+    Allows access to state via getState()
+    Allows state to be update vis dispatch(action)
+    Register listeners via subscribe(listener)
+    Handles unregistering of listeners via the function returned by subscribe(listener)

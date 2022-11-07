@@ -1,0 +1,1 @@
+export const BUY_TOFY = "BUY_TOFY"
